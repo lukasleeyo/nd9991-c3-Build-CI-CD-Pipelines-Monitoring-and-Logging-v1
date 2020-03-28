@@ -12,19 +12,19 @@
         instance_port: 80
   register: elb
 
-  - name: Create a security group
-    ec2_group:
-      name: ansible
-      description: "Ansible Security Group"
-      region: us-east-2
-      vpc_id: "{{vpc_id}}"
-      rules:
-        - proto: tcp
-          ports:
-          - 80
-          cidr_ip: 0.0.0.0/0
-          rule_desc: allow all on port 80
-    register: firewall
+- name: Create a security group
+  ec2_group:
+    name: ansible
+    description: "Ansible Security Group"
+    region: us-east-2
+    vpc_id: "{{vpc_id}}"
+    rules:
+      - proto: tcp
+        ports:
+        - 80
+        cidr_ip: 0.0.0.0/0
+        rule_desc: allow all on port 80
+  register: firewall
 
 - name: Create EC2 instances
   ec2:
