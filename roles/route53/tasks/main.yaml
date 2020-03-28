@@ -1,8 +1,8 @@
 - name: change route53
   route53:
     state: present
-    zone: testudacitylukas.com
-    record: www.testudacitylukas.com
+    zone: testudacitylukaslee.com
+    record: www.testudacitylukaslee.com
     failover: PRIMARY
     type: CNAME
     ttl: 30
