@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e -x
 export DEBIAN_FRONTEND=noninteractive
-sudo apt update
+sudo apt update -y
 sudo locale-gen pt_BR.UTF-8
 sudo apt-get install -y nginx
 cat > /etc/nginx/sites-enabled/default << EOF
