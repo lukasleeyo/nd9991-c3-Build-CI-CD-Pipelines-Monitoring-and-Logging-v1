@@ -30,7 +30,7 @@
   ec2:
     key_name: oregonec2kp
     instance_type: t2.nano
-    image: ami-0986c2ac728528ac2
+    image: "{{ami_id}}"
     user_data: "{{ USERDATA }}"
     region: us-west-2
     group_id: "{{firewall.group_id}}"

@@ -1,3 +1,4 @@
 USERDATA: "{{ lookup('file', 'user_data.sh') }}"
 ELBNAME: "{{ application }}-load-balancer"
 vpc_id: "vpc-0387067b"
+ami_id: "ami-0d1cd67c26f5fca19"
